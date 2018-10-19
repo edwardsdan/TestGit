@@ -10,6 +10,13 @@ namespace TestGit
     {
         static void Main(string[] args)
         {
+            while (true)
+            {
+                Console.WriteLine("Hi there! Enter a number between 1 and 100!");
+                string input = Console.ReadLine();
+                int number = int.Parse(input);
+            }
+
         }
     }
 }
