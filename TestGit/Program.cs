@@ -21,10 +21,11 @@ namespace TestGit
                     {
                         Console.WriteLine("Even and less than 25");
                     }
-                    if (number >= 26 && number <= 60)
+                    else if (number >= 26 && number <= 60)
                     {
                         Console.WriteLine("Even");
                     }
+
                 }
             }
         }
