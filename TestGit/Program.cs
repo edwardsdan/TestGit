@@ -30,6 +30,10 @@ namespace TestGit
                         Console.WriteLine(number + " Even");
                     }
                 }
+                else
+                {
+                    Console.WriteLine("Odd");
+                }
             }
         }
     }
