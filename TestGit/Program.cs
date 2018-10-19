@@ -21,10 +21,12 @@ namespace TestGit
                 {
                     Console.WriteLine("Hey that's not a number! Try again!");
                     input = Console.ReadLine();
-                    //if (number < 1 || number > 100)
-                    //{
-                    //    Console.WriteLine($"Hey {userName}! That's not in range! Try again");
-                    //}
+
+                }
+                while(number < 1 || number > 100)
+                {
+                    Console.WriteLine("That's not in range! Try again!");
+                    input = Console.ReadLine();
                 }
                 if (number % 2 == 0)
                 {
