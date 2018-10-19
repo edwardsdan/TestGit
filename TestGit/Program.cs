@@ -19,10 +19,12 @@ namespace TestGit
                 int number;
                 while (!int.TryParse(input, out number))
                 {
-                    if (number < 1 || number > 100)
-                    {
-                        Console.WriteLine($"Hey {userName}! That's not in range! Try again");
-                    }
+                    Console.WriteLine("Hey that's not a number! Try again!");
+                    input = Console.ReadLine();
+                    //if (number < 1 || number > 100)
+                    //{
+                    //    Console.WriteLine($"Hey {userName}! That's not in range! Try again");
+                    //}
                 }
                 if (number % 2 == 0)
                 {
