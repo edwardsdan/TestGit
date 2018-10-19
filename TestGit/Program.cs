@@ -17,7 +17,7 @@ namespace TestGit
                 int number = int.Parse(input);
                 if (number % 2 == 0)
                 {
-                    if (number >= 0 && number <23)
+                    if (number >= 2 && number < 25)
                     {
                         Console.WriteLine("Even and less than 25");
                     }
