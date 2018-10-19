@@ -16,13 +16,8 @@ namespace TestGit
                 string userName = Console.ReadLine();
                 Console.WriteLine("Welcome, " + userName + "! Enter a number between 1 and 100!");
                 string input = Console.ReadLine();
-                int number;
-                while (!int.TryParse(input, out number))
-                {
-                    Console.WriteLine("Hey that's not a number! Try again!");
-                    input = Console.ReadLine();
-
-                }
+                int number = isInteger(input);
+                
                 while(number < 1 || number > 100)
                 {
                     Console.WriteLine("That's not in range! Try again!");
@@ -63,6 +58,17 @@ namespace TestGit
                     cont = Console.ReadLine().ToLower();
                 }
             }
+        }
+
+        public static int isInteger(string input)
+        {
+            int number;
+            while (!int.TryParse(input, out number))
+            {
+                Console.WriteLine("Hey that's not a number! Try again!");
+                input = Console.ReadLine();
+            }
+            return number;
         }
     }
 }
