@@ -34,6 +34,20 @@ namespace TestGit
                 {
                     Console.WriteLine("Odd");
                 }
+                Console.WriteLine("Would you like to keep going? (y/n)");
+                string cont = Console.ReadLine().ToLower();
+                if (cont == "y")
+                {
+
+                }
+                else if (cont == "n")
+                {
+
+                }
+                else
+                {
+
+                }
             }
         }
     }
