@@ -12,7 +12,9 @@ namespace TestGit
         {
             while (true)
             {
-                Console.WriteLine("Hi there! Enter a number between 1 and 100!");
+                Console.WriteLine("Hi there! What's your name?");
+                string userName = Console.ReadLine();
+                Console.WriteLine("Welcome, " + userName + "! Enter a number between 1 and 100!");
                 string input = Console.ReadLine();
                 int number = int.Parse(input);
                 if (number % 2 == 0)
@@ -42,11 +44,12 @@ namespace TestGit
                 }
                 else if (cont == "n")
                 {
-
+                    break;
                 }
                 else
                 {
-
+                    Console.WriteLine("Sorry, didn't understand that! Try again (y/n)");
+                    cont = Console.ReadLine().ToLower();
                 }
             }
         }
