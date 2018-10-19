@@ -16,7 +16,14 @@ namespace TestGit
                 string userName = Console.ReadLine();
                 Console.WriteLine("Welcome, " + userName + "! Enter a number between 1 and 100!");
                 string input = Console.ReadLine();
-                int number = int.Parse(input);
+                int number;
+                while (!int.TryParse(input, out number))
+                {
+                    if (number < 1 || number > 100)
+                    {
+                        Console.WriteLine($"Hey {userName}! That's not in range! Try again");
+                    }
+                }
                 if (number % 2 == 0)
                 {
                     if (number >= 2 && number < 25)
@@ -48,7 +55,7 @@ namespace TestGit
                 }
                 else
                 {
-                    Console.WriteLine("Sorry, didn't understand that! Try again (y/n)");
+                    Console.WriteLine($"Sorry, {userName}. I didn't understand that! Try again (y/n)");
                     cont = Console.ReadLine().ToLower();
                 }
             }
